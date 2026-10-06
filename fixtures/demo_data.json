@@ -1,0 +1,215 @@
+[
+  {
+    "model": "blog.category",
+    "pk": 1,
+    "fields": {
+      "name": "मुख्य पृष्ठ",
+      "slug": "home",
+      "description": "टेकवाणी के सभी ताज़ा लेख और ट्रेंडिंग टेक विश्लेषण",
+      "icon": "home",
+      "meta_title": "टेकवाणी – हिंदी टेक पोर्टल",
+      "meta_description": "सभी ताज़ा लेख और टेक विश्लेषण"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 2,
+    "fields": {
+      "name": "प्रोग्रामिंग",
+      "slug": "programming",
+      "description": "पायथन, जावास्क्रिप्ट, वेब डेवलपमेंट और सॉफ्टवेयर इंजीनियरिंग गाइड",
+      "icon": "terminal",
+      "meta_title": "प्रोग्रामिंग ट्यूटोरियल – पायथन, जावास्क्रिप्ट और वेब डेवलपमेंट",
+      "meta_description": "सरल हिंदी में प्रोग्रामिंग सीखें।"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 3,
+    "fields": {
+      "name": "कीबोर्ड शॉर्टकट्स",
+      "slug": "keyboard-shortcuts",
+      "description": "विंडोज, मैक, एक्सेल, वीएस कोड और ब्राउज़र के उत्पादक शॉर्टकट्स",
+      "icon": "keyboard",
+      "meta_title": "कंप्यूटर कीबोर्ड शॉर्टकट्स हिंदी में",
+      "meta_description": "उत्पादकता 2x बढ़ाने वाले शीर्ष कीबोर्ड शॉर्टकट्स हिंदी में।"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 4,
+    "fields": {
+      "name": "कंप्यूटर ट्रिक्स",
+      "slug": "computer-tricks",
+      "description": "छिपे हुए सिस्टम टूल्स, विंडोज रन कमांड्स और स्पीड ऑप्टिमाइजेशन टिप्स",
+      "icon": "laptop_windows",
+      "meta_title": "कंप्यूटर ट्रिक्स और सीक्रेट्स",
+      "meta_description": "विंडोज रन कमांड्स और सिस्टम क्लीनअप टिप्स।"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 5,
+    "fields": {
+      "name": "गैजेट्स",
+      "slug": "gadgets",
+      "description": "लैपटॉप, मॉनिटर्स, मैकेनिकल कीबोर्ड्स और स्मार्ट एक्सेसरीज की निष्पक्ष समीक्षा",
+      "icon": "devices",
+      "meta_title": "गैजेट्स और हार्डवेयर समीक्षाएं",
+      "meta_description": "कोडिंग लैपटॉप्स और मॉनिटर्स की समीक्षा।"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 6,
+    "fields": {
+      "name": "सॉफ्टवेयर",
+      "slug": "software",
+      "description": "डेस्कटॉप सॉफ्टवेयर, यूटिलिटीज, उत्पादकता ऐप्स और ओएस टूल्स",
+      "icon": "apps",
+      "meta_title": "सॉफ्टवेयर और यूटिलिटीज गाइड",
+      "meta_description": "दैनिक कार्य और कोडिंग के लिए आवश्यक सॉफ्टवेयर।"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 7,
+    "fields": {
+      "name": "टेक गाइड",
+      "slug": "tech-guides",
+      "description": "चरण-दर-चरण तकनीकी ट्यूटोरियल और समस्या निवारण गाइड्स",
+      "icon": "menu_book",
+      "meta_title": "टेक गाइड्स – आसान हिंदी तकनीकी ट्यूटोरियल्स",
+      "meta_description": "स्टेप-बाय-स्टेप टेक गाइड्स।"
+    }
+  },
+  {
+    "model": "blog.author",
+    "pk": 1,
+    "fields": {
+      "name": "राहुल शर्मा",
+      "role": "सीनियर टेक एडिटर & सिस्टम्स आर्किटेक्ट",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDRqWTnK78J57cA3pwd5P5LdLh8F9h4rmJvHKVLcd74gYLfIwO19L_GFdjQzG_CA4RhcXrex_xwxWVvanO9E_vgOJDO35mRbtADBom8MMtNCtF32plRqivyAoBrQSHRNfWounA1j6UdCqNOVGePsQnGc7hOMkOdLEsb37n6WE3cchoml3sIO0T96lBICb9iTVkpNTx7Ky1k_zmCPPcx1lSMiGyTRtXnglEJNMLoV_cKw-QXuTqJ9YSU",
+      "bio": "10+ वर्षों का सिस्टम एडमिनिस्ट्रेशन और विंडोज/लिनक्स आर्किटेक्चर का अनुभव। टेकवाणी के प्रधान संपादक।",
+      "twitter": "@rahul_techvani",
+      "articles_count": 142
+    }
+  },
+  {
+    "model": "blog.author",
+    "pk": 2,
+    "fields": {
+      "name": "अमन वर्मा",
+      "role": "हार्डवेयर और गैजेट स्पेशलिस्ट",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
+      "bio": "गेमिंग रिग्स, कस्टम मैकेनिकल कीबोर्ड्स और वर्कस्टेशन बेंचमार्क्स के विशेषज्ञ।",
+      "twitter": "@aman_gadgets",
+      "articles_count": 88
+    }
+  },
+  {
+    "model": "blog.author",
+    "pk": 3,
+    "fields": {
+      "name": "प्रिया देसाई",
+      "role": "फ्रंटएंड डेवलपर & डिस्प्ले एनालिस्ट",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
+      "bio": "React, Next.js और अल्ट्रावाइड डिस्प्ले वर्कफ्लो पर तकनीकी गाइड लिखती हैं।",
+      "twitter": "@priya_codes",
+      "articles_count": 65
+    }
+  },
+  {
+    "model": "blog.author",
+    "pk": 4,
+    "fields": {
+      "name": "विक्रम राठौर",
+      "role": "AI & पायथन इंजीनियर",
+      "avatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=200&q=80",
+      "bio": "पायथन, मशीन लर्निंग और ओपन-सोर्स डेवलपमेंट के शौकीन।",
+      "twitter": "@vikram_py",
+      "articles_count": 94
+    }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 1,
+    "fields": { "name": "Python", "slug": "python" }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 2,
+    "fields": { "name": "JavaScript", "slug": "javascript" }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 3,
+    "fields": { "name": "Windows11", "slug": "windows11" }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 4,
+    "fields": { "name": "ExcelTricks", "slug": "exceltricks" }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 5,
+    "fields": { "name": "MacBookM3", "slug": "macbookm3" }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 6,
+    "fields": { "name": "VSCode", "slug": "vscode" }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 7,
+    "fields": { "name": "AIटूल्स", "slug": "aitools" }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 8,
+    "fields": { "name": "CyberSecurity", "slug": "cybersecurity" }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 9,
+    "fields": { "name": "React19", "slug": "react19" }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 10,
+    "fields": { "name": "GitHub", "slug": "github" }
+  },
+  {
+    "model": "blog.tag",
+    "pk": 11,
+    "fields": { "name": "Linux", "slug": "linux" }
+  },
+  {
+    "model": "blog.article",
+    "pk": 1,
+    "fields": {
+      "title": "विंडोज 11 के 25 सबसे उपयोगी कीबोर्ड शॉर्टकट्स जो आपका समय 2x बचाएंगे",
+      "slug": "windows-11-25-useful-keyboard-shortcuts",
+      "excerpt": "डेस्कटॉप स्विचिंग, वर्चुअल वर्कस्पेस, क्लिपबोर्ड हिस्ट्री और टर्मिनल एक्सेस को सहज बनाकर अपने दैनिक कंप्यूटर कार्य को सुपरचार्ज करें।",
+      "content": "विंडोज 11 में यदि आप केवल माउस पर निर्भर रहते हैं तो समय बर्बाद होता है। Win + V से क्लिपबोर्ड हिस्ट्री खोलें। Win + Shift + S से स्निपिंग टूल चलाएं।",
+      "cover_image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD1ME4gn0MqYe9-DVvwUTtan8Il5QbOWj1hGOwNQepSzUG3U7bZKPaPCHuHhXnyRW5yj85zdo5sGjijw6URRPOZAyJ3Dk-MVNSsDg7xluRng9UzrBB-qSiyzl0seSH1jg0CIy4fRF2BltHo3_3ySoTccGc4P42gZdisKtjd8P1W5DymOzZMMRpFP0ohbnG2BY9WtZljmvmUZI7OY_ELHE6JEUpuQBbWq7VuWmt7CVOHkJNfOyeyN--S",
+      "image_alt": "विंडोज 11 कीबोर्ड शॉर्टकट्स",
+      "category": 3,
+      "author": 1,
+      "tags": [3, 4],
+      "meta_title": "विंडोज 11 के 25 कीबोर्ड शॉर्टकट्स (2025) – टेकवाणी गाइड",
+      "meta_description": "डेस्कटॉप स्विचिंग, वर्चुअल वर्कस्पेस, क्लिपबोर्ड हिस्ट्री और टर्मिनल एक्सेस को सहज बनाकर समय 2x बचाएं।",
+      "keywords": "विंडोज 11, कीबोर्ड शॉर्टकट्स, कंप्यूटर ट्रिक्स",
+      "schema_type": "HowTo",
+      "is_published": true,
+      "is_featured": true,
+      "is_editorial_choice": true,
+      "is_trending": true,
+      "featured_order": 1,
+      "reading_time_minutes": 5,
+      "views_count": 38420
+    }
+  }
+]
