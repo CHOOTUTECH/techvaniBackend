@@ -33,6 +33,9 @@ INSTALLED_APPS = [
 
     # TechVani Blog App
     'blog',
+    "django_ckeditor_5",
+    
+    
 ]
 
 MIDDLEWARE = [
@@ -144,4 +147,26 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
     ],
+}
+
+
+CKEDITOR_5_CONFIGS = {
+    "default": {
+        "toolbar": [
+            "heading",
+            "|",
+            "bold",
+            "italic",
+            "underline",
+            "|",
+            "link",
+            "bulletedList",
+            "numberedList",
+            "|",
+            "blockQuote",
+            "insertTable",
+            "undo",
+            "redo",
+        ],
+    },
 }

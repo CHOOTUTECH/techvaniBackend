@@ -11,6 +11,7 @@ admin.site.index_title = "ब्लॉग पोस्ट्स, SEO मेट�
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('blog.urls')),
+    path("ckeditor5/", include("django_ckeditor_5.urls")),
 ]
 
 if settings.DEBUG:

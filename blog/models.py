@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
-
+from django_ckeditor_5.fields import CKEditor5Field
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name="श्रेणी का नाम (Category Name)")
     slug = models.SlugField(max_length=120, unique=True, blank=True, verbose_name="URL स्लग (Slug)")
@@ -70,7 +70,11 @@ class Article(models.Model):
     title = models.CharField(max_length=255, verbose_name="आर्टिकल का मुख्य शीर्षक (Title)")
     slug = models.SlugField(max_length=255, unique=True, blank=True, verbose_name="URL स्लग (Slug)")
     excerpt = models.TextField(verbose_name="संक्षिप्त सारांश (Excerpt/Summary)")
-    content = models.TextField(verbose_name="विस्तृत लेख सामग्री (Article Content - Markdown or HTML)")
+    content = CKEditor5Field(
+    verbose_name="विस्तृत लेख सामग्री (Article Content)",
+    config_name="default",
+    blank=False,
+    )
     cover_image = models.URLField(max_length=600, verbose_name="कवर फोटो URL (Cover Image URL)")
     image_alt = models.CharField(max_length=255, blank=True, default="TechVani Article Cover", verbose_name="इमेज Alt टेक्स्ट (SEO के लिए)")
 
