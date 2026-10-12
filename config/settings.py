@@ -34,8 +34,8 @@ INSTALLED_APPS = [
     # TechVani Blog App
     'blog',
     "django_ckeditor_5",
-    
-    
+    #sitemap
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -75,6 +75,7 @@ SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
 
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
@@ -90,7 +91,6 @@ DATABASES = {
             }
     }
 }
-
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
