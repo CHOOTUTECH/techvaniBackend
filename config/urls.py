@@ -6,6 +6,10 @@ from django.contrib.sitemaps.views import sitemap
 
 from blog.sitemaps import ArticleSitemap
 
+sitemaps = {
+    "articles": ArticleSitemap(),
+}
+
 # Customize Django Admin Header and Title in Hindi
 admin.site.site_header = "टेकवाणी (TechVani) - मुख्य संपादक और एडमिन पैनल"
 admin.site.site_title = "TechVani Admin Portal"
@@ -15,7 +19,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('blog.urls')),
     path("ckeditor5/", include("django_ckeditor_5.urls")),
-    path("sitemap.xml", sitemap, {"sitemaps": {"articles": ArticleSitemap}}, name="django.contrib.sitemaps.views.sitemap"),
+    
+    path(
+        "sitemap.xml",
+        sitemap,
+        {"sitemaps": sitemaps},
+        name="django.contrib.sitemaps.views.sitemap",
+    ),
 ]
 
 if settings.DEBUG:

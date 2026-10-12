@@ -1,4 +1,3 @@
-
 from django.contrib.sitemaps import Sitemap
 from .models import Article
 
@@ -6,6 +5,7 @@ from .models import Article
 class ArticleSitemap(Sitemap):
     changefreq = "weekly"
     priority = 0.8
+    protocol = "https"
 
     def items(self):
         return Article.objects.filter(is_published=True)
