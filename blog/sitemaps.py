@@ -11,7 +11,7 @@ class ArticleSitemap(Sitemap):
         return Article.objects.filter(is_published=True)
 
     def location(self, obj):
-        return f"/blog/{obj.slug}/"
+        return f"https://localfinder.shop/blog/{obj.slug}/"
 
     def get_urls(self, page=1, site=None, protocol=None):
         urls = super().get_urls(
@@ -19,11 +19,10 @@ class ArticleSitemap(Sitemap):
             site=site,
             protocol="https",
         )
+
         for url in urls:
             url["location"] = (
-                "https://localfinder.shop" + url["location"]
+                f"https://localfinder.shop/blog/{url['item'].slug}/"
             )
-        return urls
 
-    def lastmod(self, obj):
-        return getattr(obj, "updated_at", None)
+        return urls
