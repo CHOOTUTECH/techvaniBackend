@@ -11,7 +11,7 @@ class ArticleSitemap(Sitemap):
         return Article.objects.filter(is_published=True)
 
     def location(self, obj):
-        return f"/blog/{obj.slug}/"
+        return f"https://localfinder.shop/blog/{obj.slug}/"
 
     def lastmod(self, obj):
         return getattr(obj, "updated_at", None)
