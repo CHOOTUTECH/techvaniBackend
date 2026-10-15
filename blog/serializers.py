@@ -41,7 +41,7 @@ class ArticleListSerializer(serializers.ModelSerializer):
     tags = TagSerializer(many=True, read_only=True)
     
     # CamelCase mapping for smooth frontend compatibility
-    coverImage = serializers.CharField(source='cover_image')
+    coverImage = serializers.SerializerMethodField()
     imageAlt = serializers.CharField(source='image_alt')
     subCategory = serializers.CharField(source='sub_category', required=False, allow_blank=True)
     readingTimeMinutes = serializers.IntegerField(source='reading_time_minutes')
@@ -54,6 +54,20 @@ class ArticleListSerializer(serializers.ModelSerializer):
     featuredOrder = serializers.IntegerField(source='featured_order', read_only=True)
     videoDuration = serializers.CharField(source='video_duration', read_only=True)
     productPrice = serializers.CharField(source='product_price', read_only=True)
+    
+    
+    def get_coverImage(self, obj):
+        if not obj.cover_image:
+            return None
+
+        request = self.context.get('request')
+        image_url = obj.cover_image.url
+
+        if request:
+            return request.build_absolute_uri(image_url)
+
+        return image_url
+
 
     class Meta:
         model = Article
@@ -72,7 +86,7 @@ class ArticleSerializer(serializers.ModelSerializer):
     tags = TagSerializer(many=True, read_only=True)
     
     # CamelCase mapping for smooth frontend compatibility
-    coverImage = serializers.CharField(source='cover_image')
+    coverImage = serializers.SerializerMethodField()
     imageAlt = serializers.CharField(source='image_alt')
     subCategory = serializers.CharField(source='sub_category', required=False, allow_blank=True)
     readingTimeMinutes = serializers.IntegerField(source='reading_time_minutes')
@@ -92,6 +106,19 @@ class ArticleSerializer(serializers.ModelSerializer):
     canonicalUrl = serializers.CharField(source='canonical_url', required=False, allow_blank=True)
     ogImage = serializers.CharField(source='og_image', required=False, allow_blank=True)
     schemaType = serializers.CharField(source='schema_type', required=False)
+    
+    def get_coverImage(self, obj):
+        if not obj.cover_image:
+            return None
+
+        request = self.context.get('request')
+        image_url = obj.cover_image.url
+
+        if request:
+            return request.build_absolute_uri(image_url)
+
+        return image_url
+
 
     class Meta:
         model = Article
