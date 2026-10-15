@@ -14,7 +14,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-techvani-magaz
 
 DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(',') if os.environ.get('DJANGO_ALLOWED_HOSTS') else []
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS').split(',') if os.environ.get('DJANGO_ALLOWED_HOSTS') else ["127.0.0.1",
+    "localhost",]
 
 # Application definition
 INSTALLED_APPS = [
@@ -91,6 +92,7 @@ DATABASES = {
             }
     }
 }
+
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},

@@ -75,8 +75,19 @@ class Article(models.Model):
     config_name="default",
     blank=False,
     )
-    cover_image = models.URLField(max_length=600, verbose_name="कवर फोटो URL (Cover Image URL)")
-    image_alt = models.CharField(max_length=255, blank=True, default="TechVani Article Cover", verbose_name="इमेज Alt टेक्स्ट (SEO के लिए)")
+    cover_image = models.ImageField(
+    upload_to="articles/covers/",
+    blank=True,
+    null=True,
+    verbose_name="कवर फोटो (Cover Image)"
+    
+  )
+    image_alt = models.CharField(
+    max_length=255,
+    blank=True,
+    default="TechVani Article Cover",
+    verbose_name="इमेज Alt टेक्स्ट (SEO के लिए)"
+)
 
     # --- 2. संबंध (Relationships) ---
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='articles', verbose_name="मुख्य श्रेणी (Category)")
