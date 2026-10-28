@@ -76,7 +76,7 @@ class ArticleListSerializer(serializers.ModelSerializer):
             'category', 'subCategory', 'author', 'tags',
             'readingTimeMinutes', 'viewsCount', 'commentsCount', 'publishedAt',
             'isFeatured', 'is_featured', 'isEditorialChoice', 'isTrending', 'featuredOrder', 'rating',
-            'productPrice', 'videoDuration'
+            'productPrice', 'videoDuration','metaTitle', 'metaDescription', 'canonicalUrl', 'ogImage', 'schemaType'
         ]
 
 
